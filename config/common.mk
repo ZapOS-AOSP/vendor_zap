@@ -157,3 +157,10 @@ $(call inherit-product, vendor/themes/common.mk)
 
 # Sepolicy
 $(call inherit-product, vendor/zap/config/sepolicy.mk)
+
+# ZapOS Specefic Flags
+ 
+ ifeq ($(SHIP_MTK_FM_RADIO), true)
+PRODUCT_PACKAGES += \
+    RevampedFMRadio
+endif
