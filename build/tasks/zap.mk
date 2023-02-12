@@ -9,14 +9,15 @@ zap: otapackage
 	$(hide) ./vendor/zap/tools/generate_json_build_info.sh $(ZAP_TARGET_PACKAGE)
 	@echo -e ""
 	@echo -e "${cya}Building ${bldcya}ZAP${txtrst}";
-	@echo -e "	:::   :::   :::         :::     :::::::::  "
-	@echo -e "	:+:   :+: :+: :+:     :+: :+:   :+:    :+: "
-	@echo -e "	 +:+ +:+ +:+   +:+   +:+   +:+  +:+    +:+ "
-	@echo -e "	  +#++: +#++:++#++: +#++:++#++: +#++:++#+  "
-	@echo -e "	   +#+  +#+     +#+ +#+     +#+ +#+        "
-	@echo -e "	   #+#  #+#     #+# #+#     #+# #+#        "
-	@echo -e "	   ###  ###     ### ###     ### ###        "
-	@echo -e "		Yet Another AOSP Project			   "
+	@echo -e " ________  ________  ________        ________  ________      "
+	@echo -e "|\_____  \|\   __  \|\   __  \      |\   __  \|\   ____\     "
+	@echo -e " \|___/  /\ \  \|\  \ \  \|\  \     \ \  \|\  \ \  \___|_    "
+	@echo -e "     /  / /\ \   __  \ \   ____\     \ \  \ \  \ \_____  \   "
+	@echo -e "    /  /_/__\ \  \ \  \ \  \___|      \ \  \_\  \|____|\  \  "
+	@echo -e "   |\________\ \__\ \__\ \__\          \ \_______\____\_\  \ "
+	@echo -e "    \|_______|\|__|\|__|\|__|           \|_______|\_________\ "
+	@echo -e "                                                 \|_________|"
+	@echo -e "                           Get Zapped!                                 "
 	@echo -e ""
 	@echo -e "zip: "$(ZAP_TARGET_PACKAGE)
 	@echo -e "sha256: "${cya}" `cat $(ZAP_TARGET_PACKAGE).sha256sum | cut -d ' ' -f 1`"
@@ -24,3 +25,5 @@ zap: otapackage
 	@echo -e ""
 
 bacon: zap
+
+
