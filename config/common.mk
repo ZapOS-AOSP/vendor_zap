@@ -1,3 +1,6 @@
+# Inherit Zap config 
+$(call inherit-product, vendor/zap/config/zap_extra.mk)
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -56,10 +59,6 @@ WITH_DEXPREOPT_DEBUG_INFO := false
 # Dedupe VNDK libraries with identical core variants
 TARGET_VNDK_USE_CORE_VARIANT := true
 
-# Use a generic profile based boot image by default
-PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := art/build/boot/boot-image-profile.txt
-
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/zap/prebuilt/common/etc/permissions/zap-privapp-permissions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/zap-privapp-permissions.xml \
@@ -107,10 +106,6 @@ include vendor/zap/config/version.mk
 # ART
 # Optimize everything for preopt
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
-
-# SystemUI
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
@@ -161,9 +156,6 @@ $(call inherit-product, vendor/themes/common.mk)
 # Sepolicy
 $(call inherit-product, vendor/zap/config/sepolicy.mk)
 
-# ZapOS Specefic Flags
- 
- ifeq ($(SHIP_MTK_FM_RADIO), true)
-PRODUCT_PACKAGES += \
-    RevampedFMRadio
-endif
+
+
+
