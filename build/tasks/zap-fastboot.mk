@@ -1,4 +1,4 @@
-ZAP_FASTBOOT_PACKAGE := $(PRODUCT_OUT)/ZapOS-$(ZAP_VERSION)-img.zip
+ZAP_FASTBOOT_PACKAGE := $(PRODUCT_OUT)/ZapOS-$(ZAP_ANDROID_VERSION)-img.zip
 
 .PHONY: updatepackage zap-fastboot
 updatepackage: $(INTERNAL_UPDATE_PACKAGE_TARGET)

@@ -1,4 +1,4 @@
-ZAP_TARGET_PACKAGE := $(PRODUCT_OUT)/ZapOS-$(ZAP_VERSION).zip
+ZAP_TARGET_PACKAGE := $(PRODUCT_OUT)/ZapOS-$(ZAP_ANDROID_VERSION).zip
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
 .PHONY: otapackage zap bacon
