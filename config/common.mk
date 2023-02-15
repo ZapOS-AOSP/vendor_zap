@@ -68,10 +68,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     product_charger_res_images
 
-# Charger
-PRODUCT_PACKAGES += \
-    product_charger_res_images
-
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
     vendor/zap/prebuilt/common/etc/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
