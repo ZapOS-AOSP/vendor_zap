@@ -1,6 +1,10 @@
 # Inherit Zap config 
 $(call inherit-product, vendor/zap/config/zap_extra.mk)
 
+
+# Inherit Prebuilt Apps makefile
+$(call inherit-product, vendor/zap/extras/config.mk)
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -159,6 +163,7 @@ $(call inherit-product, vendor/themes/common.mk)
 
 # Sepolicy
 $(call inherit-product, vendor/zap/config/sepolicy.mk)
+
 
 
 
