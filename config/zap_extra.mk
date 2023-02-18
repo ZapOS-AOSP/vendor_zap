@@ -31,3 +31,7 @@ PRODUCT_PACKAGES += \
     	ro.config.hw_power_saving=1
 endif
 
+# Extra packages
+PRODUCT_PACKAGES += \
+    GameSpace
+
