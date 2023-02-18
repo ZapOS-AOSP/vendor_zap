@@ -34,8 +34,7 @@ PRODUCT_PACKAGES += \
 # Zap packages
 PRODUCT_PACKAGES += \
     Aperture \
-    MatLog \
-    OpenDelta
+    MatLog 
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/curl \
